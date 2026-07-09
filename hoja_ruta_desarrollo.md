@@ -16,19 +16,19 @@
 
 ### FASE A — Modelo de Dominio (`modelo/`)
 
-| # | Archivo | Estado |
-|---|---|--------|
-| 1 | `IResiduo.java` | LISTO  |
-| 2 | `Residuo.java` (abstracta) | LISTO  |
-| 3 | `ResiduoPlastico.java` | LISTO  |
-| 4 | `ResiduoVidrio.java` | LISTO  |
-| 5 | `ResiduoPapel.java` | LISTO  |
-| 6 | `Contenedor.java` (base) | LISTO  |
-| 7 | `ContenedorPlastico.java` | LISTO  |
-| 8 | `ContenedorVidrio.java` | LISTO  |
-| 9 | `ContenedorPapel.java` | LISTO  |
-| 10 | `ResiduoOrganico.java` (extensión SOLID) | LISTO  |
-| 11 | `ContenedorOrganico.java` (extensión SOLID) | LISTO  |
+| # | Archivo                                  | Estado |
+|---|------------------------------------------|--------|
+| 1 | `IResiduo.java`                          | LISTO  |
+| 2 | `Residuo.java` (abstracta)               | LISTO  |
+| 3 | `ResiduoPlastico.java`                   | LISTO  |
+| 4 | `ResiduoVidrio.java`                     | LISTO  |
+| 5 | `ResiduoPapel.java`                      | LISTO  |
+| 6 | `Contenedor.java` (base)                 | LISTO  |
+| 7 | `ContenedorPlastico.java`                | LISTO  |
+| 8 | `ContenedorVidrio.java`                  | LISTO  |
+| 9 | `ContenedorPapel.java`                   | LISTO  |
+| 10 | `ResiduoMetal.java` (extensión SOLID)    | LISTO  |
+| 11 | `ContenedorMetal.java` (extensión SOLID) | LISTO  |
 
 **Commit sugerido:** `feat: modelo de dominio residuos y contenedores`
 
@@ -38,7 +38,7 @@
 
 | # | Archivo | Descripción |
 |---|---|---|
-| 12 | `ResiduoFactory.java` | Genera residuos sin exponer clases concretas al resto del sistema |
+| 12 | `ResiduoFactory.java` | Genera residuos sin exponer clases concretas al resto del sistema | LISTO
 
 **Commit sugerido:** `feat: patron factory para creacion de residuos`
 
