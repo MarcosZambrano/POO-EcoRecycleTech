@@ -16,19 +16,19 @@
 
 ### FASE A — Modelo de Dominio (`modelo/`)
 
-| # | Archivo | Estado    |
-|---|---|-----------|
-| 1 | `IResiduo.java` | LISTO   |
-| 2 | `Residuo.java` (abstracta) | LISTO    |
-| 3 | `ResiduoPlastico.java` | LISTO     |
-| 4 | `ResiduoVidrio.java` | LISTO     |
-| 5 | `ResiduoPapel.java` | LISTO     |
-| 6 | `Contenedor.java` (base) | ⏳ Pendiente |
-| 7 | `ContenedorPlastico.java` | ⏳ Pendiente |
-| 8 | `ContenedorVidrio.java` | ⏳ Pendiente |
-| 9 | `ContenedorPapel.java` | ⏳ Pendiente |
-| 10 | `ResiduoOrganico.java` (extensión SOLID) | ⏳ Pendiente |
-| 11 | `ContenedorOrganico.java` (extensión SOLID) | ⏳ Pendiente |
+| # | Archivo | Estado |
+|---|---|--------|
+| 1 | `IResiduo.java` | LISTO  |
+| 2 | `Residuo.java` (abstracta) | LISTO  |
+| 3 | `ResiduoPlastico.java` | LISTO  |
+| 4 | `ResiduoVidrio.java` | LISTO  |
+| 5 | `ResiduoPapel.java` | LISTO  |
+| 6 | `Contenedor.java` (base) | LISTO  |
+| 7 | `ContenedorPlastico.java` | LISTO  |
+| 8 | `ContenedorVidrio.java` | LISTO  |
+| 9 | `ContenedorPapel.java` | LISTO  |
+| 10 | `ResiduoOrganico.java` (extensión SOLID) | LISTO  |
+| 11 | `ContenedorOrganico.java` (extensión SOLID) | LISTO  |
 
 **Commit sugerido:** `feat: modelo de dominio residuos y contenedores`
 
