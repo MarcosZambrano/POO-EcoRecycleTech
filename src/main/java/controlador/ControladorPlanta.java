@@ -69,5 +69,6 @@ public class ControladorPlanta {
         }
 
         vista.actualizarDescartados(planta.getTotalDescartados());
+        vista.actualizarCinta(planta.obtenerLineasCinta()); // ← la línea que faltaba
     }
 }

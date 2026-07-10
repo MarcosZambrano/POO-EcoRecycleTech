@@ -69,4 +69,12 @@ public class Planta {
             contenedor.vaciar();
         }
     }
+
+    public List<String> obtenerLineasCinta() {
+        List<String> lineas = new ArrayList<>();
+        for (IResiduo residuo : cintaTransportadora) {
+            lineas.add(residuo.getID() + " - " + residuo.getTipo() + " (" + residuo.getPeso() + " kg)");
+        }
+        return lineas;
+    }
 }
