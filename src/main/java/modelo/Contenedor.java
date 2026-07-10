@@ -32,4 +32,12 @@ public class Contenedor {
     public void vaciar() {
         nivelActual = 0;
     }
+
+    public double getCapacidadMaxima() {
+        return capacidadMaxima;
+    }
+
+    public double getNivelActual() {
+        return nivelActual;
+    }
 }

@@ -30,7 +30,7 @@ public abstract class Residuo implements IResiduo {
     }
 
     public LocalDateTime getFechaIngreso() {
-        return fechaIngreso;
+        return fecha_ingreso;
     }
 
     /**

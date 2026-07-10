@@ -5,7 +5,7 @@ package modelo;
  * Permite tratar cualquier tipo de residuo de forma homogénea (polimorfismo),
  * sin que el resto del sistema conozca las clases concretas.
  */
-public interface IResiduo() {
+public interface IResiduo {
     String getID();
 
     double getPeso();

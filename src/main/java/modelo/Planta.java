@@ -26,10 +26,11 @@ public class Planta {
         cintaTransportadora.add(residuo);
     }
 
-    public void procesarResiduo(IResiduo residuo) {
+    public void procesarResiduo(Residuo residuo) {
         if (residuo.esReciclable()) {
             Contenedor contenedor = contenedores.get(residuo.getTipo());
             contenedor.agregarResiduo(residuo.getPeso());
+            LogManager.registrarDeposito(residuo);
         } else {
             totalDescartados++;
         }
