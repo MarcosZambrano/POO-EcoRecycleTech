@@ -69,7 +69,7 @@
 
 | # | Archivo | Descripción |
 |---|---|---|
-| 16 | `VentanaPrincipal.java` | Ventana principal: estado de cinta, barras de llenado, alertas |
+| 16 | `VentanaPrincipal.java` | Ventana principal: estado de cinta, barras de llenado, alertas | LISTO
 | 17 | Componentes interactivos | Botones "Simular Entrada de Residuo", "Procesar residuo", "Vaciar contenedor" |
 
 **Commit sugerido:** `feat: interfaz grafica con swing`

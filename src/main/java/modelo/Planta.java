@@ -47,4 +47,26 @@ public class Planta {
     public void guardarEstadoActual() {
         PersistenciaEstado.guardarEstado(contenedores);
     }
+
+    public IResiduo obtenerSiguienteResiduo() {
+        if (cintaTransportadora.isEmpty()) {
+            return null;
+        }
+        return cintaTransportadora.get(0);
+    }
+
+    public Map<String, Double> obtenerPorcentajesLlenado() {
+        Map<String, Double> porcentajes = new HashMap<>();
+        for (Map.Entry<String, Contenedor> entrada : contenedores.entrySet()) {
+            porcentajes.put(entrada.getKey(), entrada.getValue().getPorcentajeLlenado());
+        }
+        return porcentajes;
+    }
+
+    public void vaciarContenedor(String tipo) {
+        Contenedor contenedor = contenedores.get(tipo);
+        if (contenedor != null) {
+            contenedor.vaciar();
+        }
+    }
 }
