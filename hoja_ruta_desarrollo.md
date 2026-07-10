@@ -48,7 +48,7 @@
 
 | # | Archivo | Descripción |
 |---|---|---|
-| 13 | `Planta.java` | Orquesta la cinta (`List<Residuo>`), contenedores, y reglas de negocio (procesar, vaciar, % llenado) |
+| 13 | `Planta.java` | Orquesta la cinta (`List<Residuo>`), contenedores, y reglas de negocio (procesar, vaciar, % llenado) | LISTO
 
 **Commit sugerido:** `feat: logica central de la planta`
 
