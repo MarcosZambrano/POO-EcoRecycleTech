@@ -91,7 +91,7 @@
 | # | Archivo | Descripción |
 |---|---|---|
 | 19 | `Main.java` | Punto de entrada: carga persistencia, arranca la Vista | LISTO
-| 20 | Hook de cierre | `WindowListener` que guarda estado al cerrar la ventana |
+| 20 | Hook de cierre | `WindowListener` que guarda estado al cerrar la ventana | LISTO
 
 **Commit sugerido:** `feat: integracion final y punto de entrada`
 

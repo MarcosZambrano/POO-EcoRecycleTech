@@ -10,9 +10,23 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Encargada de la persistencia de estado de la planta entre ejecuciones.
+ * Guarda y recupera el nivel de llenado de los contenedores en un archivo
+ * JSON (estado_planta.json), usando Gson y un DTO intermedio (ContenedorDTO)
+ * para evitar los problemas de deserialización que surgen al reconstruir
+ * jerarquías de herencia directamente desde JSON.
+ */
 public class PersistenciaEstado {
     private static final String NOMBRE_ARCHIVO = "estado_planta.json";
 
+    /**
+     * Guarda el estado actual de todos los contenedores en estado_planta.json,
+     * sobrescribiendo el contenido anterior del archivo.
+     *
+     * @param contenedores mapa de contenedores actuales de la planta, indexado por tipo
+     * @throws RuntimeException si ocurre un error al escribir o cerrar el archivo
+     */
     public static void guardarEstado(Map<String, Contenedor> contenedores) {
         List<ContenedorDTO> listaDTO = new ArrayList<>();
 
@@ -42,6 +56,14 @@ public class PersistenciaEstado {
         }
     }
 
+    /**
+     * Carga el estado previamente guardado de los contenedores desde
+     * estado_planta.json. Si el archivo no existe (primera ejecución de
+     * la aplicación), devuelve un mapa vacío sin interrumpir el programa.
+     *
+     * @return mapa con el nivel de llenado guardado por tipo de contenedor,
+     *         o un mapa vacío si no existe estado previo
+     */
     public static Map<String, Double> cargarEstado(){
         Map<String, Double> nivelesGuardados = new HashMap<>();
 
