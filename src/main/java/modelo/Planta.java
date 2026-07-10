@@ -73,7 +73,8 @@ public class Planta {
     public List<String> obtenerLineasCinta() {
         List<String> lineas = new ArrayList<>();
         for (IResiduo residuo : cintaTransportadora) {
-            lineas.add(residuo.getID() + " - " + residuo.getTipo() + " (" + residuo.getPeso() + " kg)");
+            lineas.add(residuo.getID() + " - " + residuo.getTipo() + " ("
+                    + String.format("%.2f", residuo.getPeso()) + " kg)");
         }
         return lineas;
     }

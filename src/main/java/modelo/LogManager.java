@@ -9,7 +9,7 @@ public class LogManager {
     private static final String NOMBRE_ARCHIVO = "recycle.log";
 
     public static void registrarDeposito(Residuo residuo) {
-        String linea = residuo.getFechaIngreso() + " | ID: " + residuo.getID() + " | Tipo: " + residuo.getTipo() + " | Peso: " + residuo.getPeso();
+        String linea = residuo.getFechaIngreso() + " | ID: " + residuo.getID() + " | Tipo: " + residuo.getTipo() + " | Peso: " + String.format("%.2f", residuo.getPeso()) + " kg";
         PrintWriter writer = null;
 
         try {
