@@ -5,6 +5,8 @@ import modelo.Planta;
 import modelo.Residuo;
 import vista.VentanaPrincipal;
 
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.Map;
 
 public class ControladorPlanta {
@@ -19,6 +21,13 @@ public class ControladorPlanta {
         this.vista.getBotonSimular().addActionListener(e -> manejarSimular());
         this.vista.getBotonProcesar().addActionListener(e -> manejarProcesar());
         this.vista.getBotonVaciar().addActionListener(e -> manejarVaciar());
+
+        this.vista.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                planta.guardarEstadoActual();
+            }
+        });
 
         actualizarVista();
     }

@@ -80,7 +80,7 @@
 
 | # | Archivo | Descripción |
 |---|---|---|
-| 18 | `ControladorPlanta.java` | Conecta clics de la Vista con el Modelo, ordena refresco de pantalla |
+| 18 | `ControladorPlanta.java` | Conecta clics de la Vista con el Modelo, ordena refresco de pantalla | LISTO
 
 **Commit sugerido:** `feat: controlador MVC`
 
@@ -90,7 +90,7 @@
 
 | # | Archivo | Descripción |
 |---|---|---|
-| 19 | `Main.java` | Punto de entrada: carga persistencia, arranca la Vista |
+| 19 | `Main.java` | Punto de entrada: carga persistencia, arranca la Vista | LISTO
 | 20 | Hook de cierre | `WindowListener` que guarda estado al cerrar la ventana |
 
 **Commit sugerido:** `feat: integracion final y punto de entrada`
