@@ -11,10 +11,17 @@ public class Planta {
     private int totalDescartados;
 
     public Planta() {
-        contenedores.put("Vidrio", new ContenedorVidrio(80));      // el vidrio pesa más por volumen
-        contenedores.put("Plástico", new ContenedorPlastico(50));
-        contenedores.put("Papel", new ContenedorPapel(40));         // el papel ocupa más espacio, pesa menos
-        contenedores.put("Metal", new ContenedorMetal(100));        // el metal es denso, contenedor más resistente
+        Map<String, Double> nivelesGuardados = PersistenciaEstado.cargarEstado();
+
+        double nivelVidrio = nivelesGuardados.getOrDefault("Vidrio", 0.0);
+        double nivelPlastico = nivelesGuardados.getOrDefault("Plástico", 0.0);
+        double nivelPapel = nivelesGuardados.getOrDefault("Papel", 0.0);
+        double nivelMetal = nivelesGuardados.getOrDefault("Metal", 0.0);
+
+        contenedores.put("Vidrio", new ContenedorVidrio(80, nivelVidrio));
+        contenedores.put("Plástico", new ContenedorPlastico(50, nivelPlastico));
+        contenedores.put("Papel", new ContenedorPapel(40, nivelPapel));
+        contenedores.put("Metal", new ContenedorMetal(100, nivelMetal));
     }
 
     public int getTotalDescartados() {
@@ -35,5 +42,9 @@ public class Planta {
             totalDescartados++;
         }
         cintaTransportadora.remove(residuo);
+    }
+
+    public void guardarEstadoActual() {
+        PersistenciaEstado.guardarEstado(contenedores);
     }
 }

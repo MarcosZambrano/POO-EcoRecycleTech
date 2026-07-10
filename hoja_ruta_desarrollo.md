@@ -59,7 +59,7 @@
 | # | Archivo | Descripción |
 |---|---|---|
 | 14 | `LogManager.java` | Escribe cada depósito exitoso en `recycle.log` | LISTO
-| 15 | `PersistenciaEstado.java` | Guarda/lee `estado_planta.json` al cerrar/abrir la app |
+| 15 | `PersistenciaEstado.java` | Guarda/lee `estado_planta.json` al cerrar/abrir la app | LISTO
 
 **Commit sugerido:** `feat: persistencia de logs y estado de la planta`
 
